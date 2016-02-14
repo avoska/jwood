@@ -12,8 +12,10 @@
 
   </head>
   <body>
+  <section id="ex1">
+
 <header>
-  <div class="container">
+  <div class="container navigator">
       <div class="row ">
           <div class="col-xs-12">
           <nav class="navbar navbar-default" role="navigation">
@@ -30,10 +32,10 @@
           	<!-- Collect the nav links, forms, and other content for toggling -->
           	<div class="collapse navbar-collapse navbar-ex1-collapse">
           		<ul class="nav navbar-nav">
-          			<li><a href="#">Home</a></li>
-          			<li><a href="#">About me</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact me</a></li>
+          			<li><a href="#ex1">Home</a></li>
+          			<li><a href="#ex2">About me</a></li>
+                    <li><a href="#ex3">Portfolio</a></li>
+                    <li><a href="#ex4">Contact me</a></li>
           		</ul>
           	</div><!-- /.navbar-collapse -->
           </nav>
@@ -41,7 +43,35 @@
       </div>
   </div>
 </header>
+  </section>
+<section id="ex2">
+
 <div class="container about_me">
+    <div class="row ">
+              <div class="col-xs-6 col-xs-offset-3">
+              <nav class="navbar navbar-inverse" role="navigation">
+              	<!-- Brand and toggle get grouped for better mobile display -->
+              	<div class="navbar-header nav-justified">
+              		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              			<span class="sr-only">Toggle navigation</span>
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+              			<span class="icon-bar"></span>
+              		</button>
+              	</div>
+
+              	<!-- Collect the nav links, forms, and other content for toggling -->
+              	<div class="collapse navbar-collapse navbar-ex1-collapse">
+              		<ul class="nav navbar-nav">
+              			<li><a href="#ex1">Home</a></li>
+              			<li><a href="#ex2">About me</a></li>
+                        <li><a href="#ex3">Portfolio</a></li>
+                        <li><a href="#ex4">Contact me</a></li>
+              		</ul>
+              	</div><!-- /.navbar-collapse -->
+              </nav>
+              </div>
+          </div>
     <div class="row ">
         <div class="col-xs-6" align="right">
           <img src="img/about_img.jpg" style="max-width: 100%; height: auto;">
@@ -53,9 +83,36 @@
       </div>
     </div>
 </div>
+</section>
+<section id="ex3">
 
 <div class="container-fluid folio">
     <div class="container">
+        <div class="row ">
+                     <div class="col-xs-12">
+                     <nav class="navbar navbar-default" role="navigation">
+                     	<!-- Brand and toggle get grouped for better mobile display -->
+                     	<div class="navbar-header nav-justified">
+                     		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                     			<span class="sr-only">Toggle navigation</span>
+                     			<span class="icon-bar"></span>
+                     			<span class="icon-bar"></span>
+                     			<span class="icon-bar"></span>
+                     		</button>
+                     	</div>
+
+                     	<!-- Collect the nav links, forms, and other content for toggling -->
+                     	<div class="collapse navbar-collapse navbar-ex1-collapse">
+                     		<ul class="nav navbar-nav">
+                     			<li><a href="#ex1">Home</a></li>
+                     			<li><a href="#ex2">About me</a></li>
+                               <li><a href="#ex3">Portfolio</a></li>
+                               <li><a href="#ex4">Contact me</a></li>
+                     		</ul>
+                     	</div><!-- /.navbar-collapse -->
+                     </nav>
+                     </div>
+                 </div>
         <div class="row">
             <div class="col-xs-2 col-xs-offset-1 folio_img">
                 <a href="#">
@@ -112,10 +169,38 @@
                 </div>
     </div>
 </div>
+</section>
+  <section id="ex4">
+
 <div class="container" align="center">
+    <div class="row ">
+                 <div class="col-xs-12 ">
+                 <nav class="navbar navbar-inverse" role="navigation">
+                 	<!-- Brand and toggle get grouped for better mobile display -->
+                 	<div class="navbar-header nav-justified">
+                 		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                 			<span class="sr-only">Toggle navigation</span>
+                 			<span class="icon-bar"></span>
+                 			<span class="icon-bar"></span>
+                 			<span class="icon-bar"></span>
+                 		</button>
+                 	</div>
+
+                 	<!-- Collect the nav links, forms, and other content for toggling -->
+                 	<div class="collapse navbar-collapse navbar-ex1-collapse">
+                 		<ul class="nav navbar-nav">
+                 			<li><a href="#ex1">Home</a></li>
+                 			<li><a href="#ex2">About me</a></li>
+                           <li><a href="#ex3">Portfolio</a></li>
+                           <li><a href="#ex4">Contact me</a></li>
+                 		</ul>
+                 	</div><!-- /.navbar-collapse -->
+                 </nav>
+                 </div>
+             </div>
     <div class="row">
         <div class="col-xs-12 info">
-            <h3 class="mail"><b>MAIL:</b></h3>
+            <h3 class="mail1"><b>MAIL:</b></h3>
             <h1>DIMAKONCHA@GMAIL.COM</h1>
             <h3 class="mail"><b>PHONE:</b></h3>
             <h1>+375 29 8861299</h1>
@@ -134,11 +219,33 @@
         </div>
     </div>
 </div>
+  </section>
 
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+  <script src="js/jquery-2.2.0.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+  $("#menu").on("click","a", function (event) {
+  //отменяем стандартную обработку нажатия по ссылке
+  event.preventDefault();
+
+  //забираем идентификатор бока с атрибута href
+  var id = $(this).attr('href'),
+
+  //узнаем высоту от начала страницы до блока на который ссылается якорь
+  top = $(id).offset().top;
+
+  //анимируем переход на расстояние - top за 1500 мс
+  $('body,html').animate({scrollTop: top}, 15000);
+  });
+  });
+  </script>
+  </body>
   </body>
 </html>
