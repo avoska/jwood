@@ -52,6 +52,7 @@
     width: 100vw;
     height: 100vh;
     background: url(../img/folio_bg.jpg) center no-repeat;
+    bacground-size: cover;
 }
 .folio_img{
     margin-top: 360px;
