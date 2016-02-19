@@ -47,6 +47,10 @@
     width: 100vw;
 
 }
+img_about{
+    width:30vw;
+    height:50vh;
+}
 .folio{
     background-size: cover;
     width: 100vw;
@@ -55,7 +59,7 @@
     bacground-size: cover;
 }
 .folio_img{
-    margin-top: 360px;
+    margin-top: 20vh;
 }
 .folio_img2{
     margin-top:50px;
