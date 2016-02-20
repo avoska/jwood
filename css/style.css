@@ -16,6 +16,9 @@
         text-align: center;
     }
 }
+body{
+    overflow-x: hidden;
+}
 .navbar-inverse{
     border-radius: 0px;
     background-color: black;
@@ -47,19 +50,24 @@
     width: 100vw;
 
 }
+.about_img{
+    height: 60vh;
+}
 .folio{
     background-size: cover;
     width: 100vw;
     height: 100vh;
     background: url(../img/folio_bg.jpg) center no-repeat;
+    background-size: cover;
 }
 .folio_img{
-    margin-top: 360px;
+    margin-top: 20vh;
 }
 .folio_img2{
-    margin-top:50px;
+    margin-top: 2vh;
 }
 .info{
+    margin-top: 20vh;
     vertical-align: middle;
     font-family: NexaLite;
     height: 100vh;
